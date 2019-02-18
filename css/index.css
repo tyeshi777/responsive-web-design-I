@@ -156,9 +156,9 @@ h5 {
   box-sizing: border-box;
 }
 .container {
-  font-size: 14px;
+  font-size: 18px;
   max-width: 880px;
-  margin: 0 auto;
+  margin: 0 20px;
 }
 html,
 body {
@@ -170,6 +170,9 @@ body {
   text-decoration: none;
   color: black;
   margin-left: 30px;
+}
+.heading nav a:first-child {
+  margin-left: 10px;
 }
 .heading nav a:hover {
   color: red;
@@ -230,7 +233,9 @@ img {
 .main-content section {
   margin: 20px 5px;
 }
-
+.main-content p {
+  font-size: 20px;
+}
 /* second-main css */
 
 .second-main {
@@ -246,7 +251,6 @@ img {
 
 footer {
   line-height: 30px;
-  margin-left: 15px;
   padding-top: 20px;
 }
 footer p.copyright {
@@ -262,11 +266,12 @@ footer p.copyright:hover {
 @media (max-width: 800px) {
   .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 20px;
     font-size: 17.5px;
   }
   .heading .section-logo {
     order: -1;
+    margin-left: 70px;
   }
   .heading .nav-section {
     width: 100%;
@@ -287,20 +292,23 @@ footer p.copyright:hover {
     display: none;
   }
   .content {
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: center;
+  }
+  .content .p-1 {
+    font-size: 70px;
   }
 }
 
 @media (max-width: 500px) {
   .container {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 20px;
     font-size: 16px;
   }
   .heading .section-logo {
     order: -1;
-    margin-left: 60px;
+    margin-left: 30px;
   }
   .heading .navigation {
     display: flex;
@@ -311,17 +319,19 @@ footer p.copyright:hover {
   .heading nav a {
     width: 100%;
     padding: 20px;
+    margin: 0;
     border-bottom: 1px solid black;
     text-align: center;
   }
   .heading nav a:first-child {
     border-top: 1px solid black;
   }
-  .container {
-    margin: auto 20px;
-  }
   .content .img-1 {
     display: none;
+  }
+  .content {
+    display: flex;
+    fl
   }
   .main-content {
     flex-direction: column;
