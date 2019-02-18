@@ -158,7 +158,7 @@ h5 {
 .container {
   font-size: 14px;
   max-width: 880px;
-  margin: auto;
+  margin: 0 auto;
 }
 html,
 body {
@@ -182,6 +182,7 @@ body {
 .heading section {
   margin: 20px 10px;
 }
+
 img {
   width: 100%;
   height: auto;
@@ -259,41 +260,59 @@ footer p.copyright:hover {
 }
 
 @media (max-width: 800px) {
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17.5px;
+  }
   .heading .section-logo {
     order: -1;
   }
+  .heading .nav-section {
+    width: 100%;
+  }
+  .heading .nav-section nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  /* .heading .section-logo {
+    flex-direction: row-reverse;
+  } */
   .heading {
     flex-direction: column;
     align-items: center;
   }
-  .container {
-    margin: auto 20px;
-
   .content .img-1 {
     display: none;
   }
   .content {
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
+    justify-content: center;
   }
 }
 
 @media (max-width: 500px) {
   .container {
-    width: 500px;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
   }
   .heading .section-logo {
     order: -1;
+    margin-left: 60px;
   }
   .heading .navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    justify-content: center;
   }
   .heading nav a {
+    width: 100%;
     padding: 20px;
     border-bottom: 1px solid black;
+    text-align: center;
   }
   .heading nav a:first-child {
     border-top: 1px solid black;
